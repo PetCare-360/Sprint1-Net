@@ -1,7 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\arthu\\source\\repos\\PetCare360\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\arthu\\source\\repos\\Sprint1-Net\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E8665C0-F89B-7F04-BA19-E0C47E430C82}|PetCare360\\PetCare360.csproj|c:\\users\\arthu\\source\\repos\\sprint1-net\\petcare360\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E8665C0-F89B-7F04-BA19-E0C47E430C82}|PetCare360\\PetCare360.csproj|solutionrelative:petcare360\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\arthu\\source\\repos\\Sprint1-Net\\PetCare360\\Program.cs",
+              "RelativeDocumentMoniker": "PetCare360\\Program.cs",
+              "ToolTip": "C:\\Users\\arthu\\source\\repos\\Sprint1-Net\\PetCare360\\Program.cs",
+              "RelativeToolTip": "PetCare360\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T16:22:07.61Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
