@@ -48,14 +48,20 @@ PetCare360/
 │   └── Enums.cs
 ├── DTOs/
 │   ├── Requests/
+│   │   └── Requests.cs
 │   └── Responses/
+│       └── Responses.cs
 ├── Data/
-│   └── AppDbContext.cs
+│   ├── AppDbContext.cs
+│   └── AppDbContextFactory.cs
 ├── Repositories/
 │   ├── Interfaces/
+│   │   └── IRepositories.cs
 │   └── Implementations/
+│       └── Repositories.cs
 ├── Services/
 │   ├── Interfaces/
+│   │   └── IServices.cs
 │   ├── AuthService.cs
 │   ├── PetService.cs
 │   ├── MonitoringService.cs
@@ -64,8 +70,12 @@ PetCare360/
 │   └── PetMapper.cs
 ├── Middleware/
 │   └── GlobalExceptionMiddleware.cs
-└── Exceptions/
-    └── AppExceptions.cs
+├── Exceptions/
+│   └── AppExceptions.cs
+├── Migrations/
+├── appsettings.json
+├── Program.cs
+└── PetCare360.csproj
 ```
 
 ## ⚙️ Como Instalar e Executar
