@@ -2,13 +2,13 @@
 
 API RESTful desenvolvida em ASP.NET Core para monitoramento contínuo da saúde de pets, parte do Challenge 2026 — FIAP x Clyvo Vet.
 
-## 📋 Descrição do Projeto
+## Descrição do Projeto
 
 A PetCare360 API é a camada de backend do sistema de monitoramento inteligente de saúde animal da Clyvo Vet. A solução transforma a jornada de saúde do pet de um modelo reativo e episódico para uma experiência contínua, preventiva e integrada.
 
 A API permite o cadastro de pets vinculados a coleiras inteligentes (IoT), recebe telemetria em tempo real dos sensores, calcula o status de saúde do animal, gera alertas automáticos em situações críticas e fornece histórico completo de monitoramento para responsáveis e clínicas veterinárias.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - .NET 9.0
 - ASP.NET Core Web API
@@ -19,7 +19,7 @@ A API permite o cadastro de pets vinculados a coleiras inteligentes (IoT), receb
 - BCrypt.Net
 - Swagger / OpenAPI (Swashbuckle)
 
-## 👥 Integrantes
+## Integrantes
 
 | Nome | RM |
 |------|----|
@@ -29,7 +29,7 @@ A API permite o cadastro de pets vinculados a coleiras inteligentes (IoT), receb
 | Rafael de Freitas Moraes | RM563210 |
 | Rafael Pascotte Mercadante | RM564928 |
 
-## 🗂️ Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 PetCare360/
@@ -78,7 +78,7 @@ PetCare360/
 └── PetCare360.csproj
 ```
 
-## ⚙️ Como Instalar e Executar
+## Como Instalar e Executar
 
 ### Pré-requisitos
 
@@ -137,7 +137,7 @@ Abra o navegador em:
 http://localhost:5000
 ```
 
-## 🔒 Autenticação
+## Autenticação
 
 A API utiliza autenticação JWT. Para acessar os endpoints protegidos:
 
@@ -145,7 +145,7 @@ A API utiliza autenticação JWT. Para acessar os endpoints protegidos:
 2. Faça login em `POST /auth/login` e copie o `token` retornado
 3. No Swagger, clique em **Authorize** e insira `Bearer SEU_TOKEN`
 
-## 🚀 Endpoints
+## Endpoints
 
 ### Auth — `/auth`
 
@@ -184,7 +184,7 @@ A API utiliza autenticação JWT. Para acessar os endpoints protegidos:
 |--------|------|-----------|------|
 | POST | `/api/iot/data` | Receber telemetria da coleira inteligente | ❌ |
 
-## 📦 Exemplos de Requisição
+## Exemplos de Requisição
 
 ### Cadastrar usuário
 ```json
@@ -232,7 +232,7 @@ POST /api/iot/data
 }
 ```
 
-## 📊 Códigos de Retorno HTTP
+## Códigos de Retorno HTTP
 
 | Código | Descrição |
 |--------|-----------|
