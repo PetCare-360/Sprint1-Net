@@ -1,0 +1,102 @@
+2026-09-05 15:36:26.115 -03:00 [INF] User profile is available. Using 'C:\Users\Leo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-05 15:36:26.185 -03:00 [INF] Creating key {4d0167ef-c8b3-46a1-b40f-2dd10ae660be} with creation date 2026-09-05 18:36:26Z, activation date 2026-09-05 18:36:26Z, and expiration date 2026-12-04 18:36:26Z.
+2026-09-05 15:36:26.195 -03:00 [INF] Writing data to file 'C:\Users\Leo\AppData\Local\ASP.NET\DataProtection-Keys\key-4d0167ef-c8b3-46a1-b40f-2dd10ae660be.xml'.
+2026-09-05 15:36:26.263 -03:00 [INF] Now listening on: http://localhost:5251
+2026-09-05 15:36:26.265 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 15:36:26.266 -03:00 [INF] Hosting environment: Development
+2026-09-05 15:36:26.266 -03:00 [INF] Content root path: C:\Users\Leo\OneDrive\Desktop\Challenge .NET\Sprint1-Net\PetCare360
+2026-09-05 15:36:30.290 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/ - null null
+2026-09-05 15:36:30.326 -03:00 [INF] HTTP GET / responded 301 in 16.5395 ms
+2026-09-05 15:36:30.344 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/ - 301 0 null 67.449ms
+2026-09-05 15:36:30.368 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/index.html - null null
+2026-09-05 15:36:30.428 -03:00 [INF] HTTP GET /index.html responded 200 in 57.0237 ms
+2026-09-05 15:36:30.430 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/index.html - 200 null text/html;charset=utf-8 61.3138ms
+2026-09-05 15:36:30.441 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger-ui.css - null null
+2026-09-05 15:36:30.441 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/index.css - null null
+2026-09-05 15:36:30.442 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger-ui-bundle.js - null null
+2026-09-05 15:36:30.442 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/index.js - null null
+2026-09-05 15:36:30.442 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger-ui-standalone-preset.js - null null
+2026-09-05 15:36:30.448 -03:00 [INF] HTTP GET /index.js responded 200 in 0.2904 ms
+2026-09-05 15:36:30.451 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/index.js - 200 null application/javascript;charset=utf-8 8.7199ms
+2026-09-05 15:36:30.452 -03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-09-05 15:36:30.454 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-09-05 15:36:30.454 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-09-05 15:36:30.455 -03:00 [INF] HTTP GET /index.css responded 200 in 11.0024 ms
+2026-09-05 15:36:30.457 -03:00 [INF] HTTP GET /swagger-ui-standalone-preset.js responded 200 in 7.4757 ms
+2026-09-05 15:36:30.457 -03:00 [INF] HTTP GET /swagger-ui.css responded 200 in 13.9004 ms
+2026-09-05 15:36:30.458 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/index.css - 200 202 text/css 17.3001ms
+2026-09-05 15:36:30.459 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-09-05 15:36:30.461 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger-ui-standalone-preset.js - 200 229223 text/javascript 18.7554ms
+2026-09-05 15:36:30.462 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger-ui.css - 200 154948 text/css 20.7439ms
+2026-09-05 15:36:30.466 -03:00 [INF] HTTP GET /swagger-ui-bundle.js responded 200 in 20.1601 ms
+2026-09-05 15:36:30.472 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger-ui-bundle.js - 200 1466324 text/javascript 30.1042ms
+2026-09-05 15:36:30.596 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger/v1/swagger.json - null null
+2026-09-05 15:36:30.598 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/favicon-32x32.png - null null
+2026-09-05 15:36:30.602 -03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-09-05 15:36:30.603 -03:00 [INF] HTTP GET /favicon-32x32.png responded 200 in 1.4080 ms
+2026-09-05 15:36:30.605 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/favicon-32x32.png - 200 628 image/png 6.9016ms
+2026-09-05 15:36:30.736 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 136.6830 ms
+2026-09-05 15:36:30.738 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 141.9004ms
+2026-09-05 15:38:43.291 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/health/live - null null
+2026-09-05 15:38:43.329 -03:00 [INF] Executing endpoint 'Health checks'
+2026-09-05 15:38:43.333 -03:00 [INF] Executed endpoint 'Health checks'
+2026-09-05 15:38:43.334 -03:00 [INF] HTTP GET /health/live responded 200 in 39.6083 ms
+2026-09-05 15:38:43.335 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/health/live - 200 null text/plain 43.5138ms
+2026-09-05 15:38:43.357 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/favicon.ico - null null
+2026-09-05 15:38:43.360 -03:00 [WRN] HTTP GET /favicon.ico responded 404 in 1.3051 ms
+2026-09-05 15:38:43.362 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/favicon.ico - 404 0 null 4.6124ms
+2026-09-05 15:38:43.363 -03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5251/favicon.ico, Response status code: 404
+2026-09-05 15:38:52.931 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/health - null null
+2026-09-05 15:38:52.934 -03:00 [INF] Executing endpoint 'Health checks'
+2026-09-05 15:38:52.941 -03:00 [WRN] Health check external-service with status "Degraded" completed after 1.3717ms with message 'URL do serviço externo não configurada.'
+2026-09-05 15:38:54.913 -03:00 [ERR] 2026-09-05 15:38:54.913821 ThreadID:20  (ERROR)   OracleDatabaseCreator.ExistsAsync() :  OracleException.Number: 1017
+2026-09-05 15:38:54.915 -03:00 [ERR] Health check oracle with status "Unhealthy" completed after 1897.9336ms with message 'null'
+2026-09-05 15:38:54.925 -03:00 [INF] Executed endpoint 'Health checks'
+2026-09-05 15:38:54.927 -03:00 [ERR] HTTP GET /health responded 503 in 1993.7941 ms
+2026-09-05 15:38:54.928 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/health - 503 null text/plain 1997.0833ms
+2026-09-05 15:39:10.404 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/health/ready - null null
+2026-09-05 15:39:10.406 -03:00 [INF] Executing endpoint 'Health checks'
+2026-09-05 15:39:10.407 -03:00 [WRN] Health check external-service with status "Degraded" completed after 0.0412ms with message 'URL do serviço externo não configurada.'
+2026-09-05 15:39:11.495 -03:00 [ERR] 2026-09-05 15:39:11.495823 ThreadID:20  (ERROR)   OracleDatabaseCreator.ExistsAsync() :  OracleException.Number: 1017
+2026-09-05 15:39:11.496 -03:00 [ERR] Health check oracle with status "Unhealthy" completed after 1087.9647ms with message 'null'
+2026-09-05 15:39:11.497 -03:00 [INF] Executed endpoint 'Health checks'
+2026-09-05 15:39:11.498 -03:00 [ERR] HTTP GET /health/ready responded 503 in 1091.6129 ms
+2026-09-05 15:39:11.499 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/health/ready - 503 null text/plain 1095.1714ms
+2026-09-05 15:39:20.201 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/metrics - null null
+2026-09-05 15:39:20.204 -03:00 [INF] Executing endpoint '/metrics'
+2026-09-05 15:39:20.247 -03:00 [INF] Executed endpoint '/metrics'
+2026-09-05 15:39:20.248 -03:00 [INF] HTTP GET /metrics responded 200 in 44.4271 ms
+2026-09-05 15:39:20.249 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/metrics - 200 null text/plain; version=0.0.4; charset=utf-8 47.8285ms
+2026-09-05 22:53:18.106 -03:00 [INF] User profile is available. Using 'C:\Users\Leo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-05 22:53:18.225 -03:00 [INF] Now listening on: http://localhost:5251
+2026-09-05 22:53:18.227 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-05 22:53:18.228 -03:00 [INF] Hosting environment: Development
+2026-09-05 22:53:18.228 -03:00 [INF] Content root path: C:\Users\Leo\OneDrive\Desktop\Challenge .NET\Sprint1-Net\PetCare360
+2026-09-05 22:53:20.996 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/ - null null
+2026-09-05 22:53:21.029 -03:00 [INF] HTTP GET / responded 301 in 16.5008 ms
+2026-09-05 22:53:21.039 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/ - 301 0 null 53.3374ms
+2026-09-05 22:53:21.064 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/index.html - null null
+2026-09-05 22:53:21.121 -03:00 [INF] HTTP GET /index.html responded 200 in 54.7210 ms
+2026-09-05 22:53:21.123 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/index.html - 200 null text/html;charset=utf-8 58.6486ms
+2026-09-05 22:53:21.135 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger-ui.css - null null
+2026-09-05 22:53:21.136 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/index.css - null null
+2026-09-05 22:53:21.136 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger-ui-bundle.js - null null
+2026-09-05 22:53:21.137 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/index.js - null null
+2026-09-05 22:53:21.137 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger-ui-standalone-preset.js - null null
+2026-09-05 22:53:21.142 -03:00 [INF] HTTP GET /index.js responded 200 in 0.2901 ms
+2026-09-05 22:53:21.144 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/index.js - 200 null application/javascript;charset=utf-8 7.7932ms
+2026-09-05 22:53:21.146 -03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-09-05 22:53:21.148 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-09-05 22:53:21.148 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-09-05 22:53:21.149 -03:00 [INF] HTTP GET /index.css responded 200 in 10.2646 ms
+2026-09-05 22:53:21.151 -03:00 [INF] HTTP GET /swagger-ui.css responded 200 in 13.1669 ms
+2026-09-05 22:53:21.151 -03:00 [INF] HTTP GET /swagger-ui-standalone-preset.js responded 200 in 7.7254 ms
+2026-09-05 22:53:21.152 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/index.css - 200 202 text/css 16.2768ms
+2026-09-05 22:53:21.152 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-09-05 22:53:21.154 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger-ui.css - 200 154948 text/css 19.5321ms
+2026-09-05 22:53:21.155 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger-ui-standalone-preset.js - 200 229223 text/javascript 18.3235ms
+2026-09-05 22:53:21.159 -03:00 [INF] HTTP GET /swagger-ui-bundle.js responded 200 in 18.9978 ms
+2026-09-05 22:53:21.165 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger-ui-bundle.js - 200 1466324 text/javascript 28.9858ms
+2026-09-05 22:53:21.278 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5251/swagger/v1/swagger.json - null null
+2026-09-05 22:53:21.412 -03:00 [INF] HTTP GET /swagger/v1/swagger.json responded 200 in 132.0823 ms
+2026-09-05 22:53:21.414 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5251/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 135.6773ms

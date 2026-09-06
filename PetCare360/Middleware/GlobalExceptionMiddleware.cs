@@ -1,47 +1,88 @@
-﻿using System.Net;
-using System.Text.Json;
+﻿using Microsoft.AspNetCore.Http;
 using PetCare360.Exceptions;
+using Serilog;
 
 namespace PetCare360.Middleware;
 
-public class GlobalExceptionMiddleware(RequestDelegate next, ILogger<GlobalExceptionMiddleware> logger)
+public class GlobalExceptionMiddleware
 {
+    private readonly RequestDelegate _next;
+
+    public GlobalExceptionMiddleware(RequestDelegate next)
+    {
+        _next = next;
+    }
+
     public async Task InvokeAsync(HttpContext context)
     {
         try
         {
-            await next(context);
+            await _next(context);
+        }
+        catch (NotFoundException ex)
+        {
+            Log.Warning(ex, "Recurso não encontrado: {Message}", ex.Message);
+
+            await WriteResponseAsync(
+                context,
+                StatusCodes.Status404NotFound,
+                ex.Message);
+        }
+        catch (BadRequestException ex)
+        {
+            Log.Warning(ex, "Requisição inválida: {Message}", ex.Message);
+
+            await WriteResponseAsync(
+                context,
+                StatusCodes.Status400BadRequest,
+                ex.Message);
+        }
+        catch (UnauthorizedException ex)
+        {
+            Log.Warning(ex, "Acesso não autorizado: {Message}", ex.Message);
+
+            await WriteResponseAsync(
+                context,
+                StatusCodes.Status401Unauthorized,
+                ex.Message);
+        }
+        catch (ConflictException ex)
+        {
+            Log.Warning(ex, "Conflito: {Message}", ex.Message);
+
+            await WriteResponseAsync(
+                context,
+                StatusCodes.Status409Conflict,
+                ex.Message);
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Unhandled exception: {Message}", ex.Message);
-            await HandleExceptionAsync(context, ex);
+            Log.Error(ex, "Erro interno não tratado");
+
+            await WriteResponseAsync(
+                context,
+                StatusCodes.Status500InternalServerError,
+                "Ocorreu um erro interno no servidor.");
         }
     }
 
-    private static Task HandleExceptionAsync(HttpContext context, Exception exception)
+    private static async Task WriteResponseAsync(
+        HttpContext context,
+        int statusCode,
+        string message)
     {
-        var (statusCode, message) = exception switch
-        {
-            NotFoundException e => (HttpStatusCode.NotFound, e.Message),
-            BadRequestException e => (HttpStatusCode.BadRequest, e.Message),
-            UnauthorizedException e => (HttpStatusCode.Unauthorized, e.Message),
-            ConflictException e => (HttpStatusCode.Conflict, e.Message),
-            _ => (HttpStatusCode.InternalServerError, "Ocorreu um erro interno no servidor.")
-        };
+        if (context.Response.HasStarted)
+            return;
 
+        context.Response.StatusCode = statusCode;
         context.Response.ContentType = "application/json";
-        context.Response.StatusCode = (int)statusCode;
 
-        var body = JsonSerializer.Serialize(new
+        await context.Response.WriteAsJsonAsync(new
         {
-            status = (int)statusCode,
-            error = statusCode.ToString(),
+            statusCode,
             message,
-            path = context.Request.Path.Value,
-            timestamp = DateTimeOffset.UtcNow
+            timestamp = DateTime.UtcNow,
+            traceId = context.TraceIdentifier
         });
-
-        return context.Response.WriteAsync(body);
     }
 }

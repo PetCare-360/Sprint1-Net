@@ -1,0 +1,6 @@
+2026-09-06 14:55:41.611 -03:00 [INF] User profile is available. Using 'C:\Users\Leo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-09-06 14:55:41.721 -03:00 [INF] Now listening on: http://localhost:5251
+2026-09-06 14:55:41.723 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-06 14:55:41.724 -03:00 [INF] Hosting environment: Development
+2026-09-06 14:55:41.724 -03:00 [INF] Content root path: C:\Users\Leo\OneDrive\Desktop\Challenge .NET\Sprint1-Net\PetCare360
+2026-09-06 14:56:04.448 -03:00 [INF] Application is shutting down...
