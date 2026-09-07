@@ -31,11 +31,15 @@ Nesta versão, o projeto também conta com recursos de **observabilidade**, incl
 
 ## Integrantes
 
-| **Nome**                         |  **RM**  |
-| Leonardo Zerbinatti de Sales     | RM562992 |
-| Luis Guilherme Borges Silva      | RM562992 |
-| Rafael de Freitas Moraes         | RM563210 |
-| Rafael Pascotte Mercadante       | RM564928 |
+**Nome** e **RM**
+
+Leonardo Zerbinatti de Sales - RM562992
+
+Luis Guilherme Borges Silva - RM562992
+
+Rafael de Freitas Moraes - RM563210
+
+Rafael Pascotte Mercadante - RM564928
 
 ## Estrutura do Projeto
 
