@@ -1,0 +1,15 @@
+# Arquivos gerados pelo .NET
+**/bin/
+**/obj/
+
+# Logs
+**/logs/
+*.log
+
+# Configurações locais e segredos
+.env
+.env.*
+!.env.example
+
+# Arquivos do Visual Studio
+.vs/

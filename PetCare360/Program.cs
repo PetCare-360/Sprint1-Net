@@ -4,17 +4,18 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using MongoDB.Driver;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using PetCare360.Data;
+using PetCare360.HealthChecks;
 using PetCare360.Middleware;
 using PetCare360.Repositories.Implementations;
 using PetCare360.Repositories.Interfaces;
 using PetCare360.Services;
 using PetCare360.Services.Interfaces;
 using Serilog;
-using PetCare360.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -105,6 +106,28 @@ builder.Services.AddOpenTelemetry()
             .AddPrometheusExporter();
     });
 
+// MongoDB: conexão e banco de dados
+var mongoConnectionString =
+    builder.Configuration["MongoDB:ConnectionString"]
+    ?? "mongodb://localhost:27017";
+
+var mongoDatabaseName =
+    builder.Configuration["MongoDB:Database"]
+    ?? "PetCare360";
+
+builder.Services.AddSingleton<IMongoClient>(
+    _ => new MongoClient(mongoConnectionString));
+
+builder.Services.AddSingleton<IMongoDatabase>(serviceProvider =>
+    serviceProvider
+        .GetRequiredService<IMongoClient>()
+        .GetDatabase(mongoDatabaseName));
+
+builder.Services.AddSingleton<
+    IMongoTelemetryRepository,
+    MongoTelemetryRepository>();
+
+// Repositórios Oracle existentes
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IPetRepository, PetRepository>();
 builder.Services.AddScoped<IDeviceRepository, DeviceRepository>();

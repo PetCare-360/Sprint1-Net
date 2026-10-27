@@ -10,14 +10,18 @@ A API permite o cadastro de pets vinculados a coleiras inteligentes (IoT), receb
 
 Nesta versão, o projeto também conta com recursos de **observabilidade**, incluindo Health Checks, logging estruturado, métricas, tracing distribuído e identificação por correlação de requisições, além de uma estrutura de **testes unitários e de integração automatizados**.
 
+O projeto utiliza dois bancos de dados: **Oracle Database**, para persistência relacional principal, e **MongoDB**, para armazenamento complementar de documentos de telemetria dos sensores.
+
 ## Tecnologias Utilizadas
 
 - .NET 9.0
 - ASP.NET Core Web API
 - Entity Framework Core 9
-- Oracle Database (oracle.fiap.com.br)
+- Oracle Database (`oracle.fiap.com.br`)
 - Oracle.EntityFrameworkCore
 - Entity Framework Core InMemory
+- MongoDB
+- MongoDB.Driver
 - JWT Bearer Authentication
 - BCrypt.Net
 - Swagger / OpenAPI (Swashbuckle)
@@ -31,74 +35,43 @@ Nesta versão, o projeto também conta com recursos de **observabilidade**, incl
 
 ## Integrantes
 
-**Nome** e **RM**
+| Nome | RM |
+|---|---|
+| Leonardo Zerbinatti de Sales | RM562992 |
+| Luis Guilherme Borges Silva | RM562992 |
+| Rafael de Freitas Moraes | RM563210 |
+| Rafael Pascotte Mercadante | RM564928 |
 
-Leonardo Zerbinatti de Sales - RM562992
+## Arquitetura de Dados
 
-Luis Guilherme Borges Silva - RM562992
+### Oracle Database
 
-Rafael de Freitas Moraes - RM563210
+O Oracle é o banco de dados relacional principal da aplicação. É utilizado para persistir as entidades relacionais do sistema, como usuários, pets, dispositivos, dados de sensores e alertas, conforme a implementação dos repositórios e do contexto de dados.
 
-Rafael Pascotte Mercadante - RM564928
+### MongoDB
 
-## Estrutura do Projeto
+O MongoDB é utilizado como armazenamento complementar para documentos de telemetria dos sensores.
 
-```text
-PetCare360/
-├── Controllers/
-│   ├── AuthController.cs
-│   ├── PetController.cs
-│   ├── MonitoringController.cs
-│   └── IotController.cs
-├── Models/
-│   ├── AppUser.cs
-│   ├── Pet.cs
-│   ├── Device.cs
-│   ├── SensorData.cs
-│   └── Alert.cs
-├── Enums/
-│   └── Enums.cs
-├── DTOs/
-│   ├── Requests/
-│   │   └── Requests.cs
-│   └── Responses/
-│       └── Responses.cs
-├── Data/
-│   ├── AppDbContext.cs
-│   └── AppDbContextFactory.cs
-├── Repositories/
-│   ├── Interfaces/
-│   │   └── IRepositories.cs
-│   └── Implementations/
-│       └── Repositories.cs
-├── Services/
-│   ├── Interfaces/
-│   │   └── IServices.cs
-│   ├── AuthService.cs
-│   ├── PetService.cs
-│   ├── MonitoringService.cs
-│   ├── IotProcessingService.cs
-│   ├── CurrentUserService.cs
-│   └── PetMapper.cs
-├── Middleware/
-│   ├── CorrelationIdMiddleware.cs
-│   ├── GlobalExceptionMiddleware.cs
-│   ├── ApplicationMetrics.cs
-│   └── RequestMetricsMiddleware.cs
-├── HealthChecks/
-│   └── ExternalServiceHealthCheck.cs
-├── Exceptions/
-│   └── AppExceptions.cs
-├── Migrations/
-├── appsettings.json
-├── Program.cs
-└── PetCare360.csproj
+A configuração padrão utiliza:
 
-PetCare360.Tests.Unit/
-├── PetServiceTests.cs
-└── PetServiceStatusTests.cs
+- **Banco de dados:** `PetCare360`
+- **Coleção:** `telemetry`
+- **Endereço local:** `mongodb://localhost:27017`
 
-PetCare360.Tests.Integration/
-├── PetCareWebApplicationFactory.cs
-├── AuthIntegrationTests.cs
-└── PetIntegrationTests.cs
+A coleção pode ser criada automaticamente pelo MongoDB na primeira gravação de documentos.
+
+A conexão com o MongoDB é configurada por meio das configurações da aplicação e pode ser substituída por uma variável de ambiente, permitindo a execução em diferentes máquinas.
+
+## Pré-requisitos
+
+Antes de executar o projeto, certifique-se de que os seguintes componentes estejam disponíveis:
+
+- .NET SDK 9.0
+- Oracle Database acessível, com usuário e senha válidos
+- MongoDB Community Server instalado e em execução, ou uma instância MongoDB acessível pela rede
+- Git, caso o projeto seja obtido por meio do repositório
+
+Para verificar a instalação do .NET:
+
+```powershell
+dotnet --info
